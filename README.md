@@ -11,4 +11,5 @@ https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf
 5. Kasutajale antakse 20 random filmi, kasutaja peab sealt valima 5. Ja selle põhjal otsustab.
 6. Mudel recommendib žanr, cast essad kolm näitlejat. Ehk 5 filmist 3 on selle valikuga, 2 on random.
 7. Recommended filmid peavad olema erinevad. Iga kord kui sa refreshid peab see olema erinev - mingi mälulaadne asi teha
+8. Kui saaks mingi teise dataset, kus oleksid huvitavad faktid nende filmide kohta, siis saaks peale valikuid userile funfacte printida valitud filmide kohta. Optional.
 
