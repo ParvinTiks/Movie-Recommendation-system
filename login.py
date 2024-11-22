@@ -28,7 +28,6 @@ def display_random_movies(file_path):
        
         df = pd.read_csv(file_path)
         
-        
         if len(df) >= 20:
             
             random_movies = df.sample(n=20, random_state=random.randint(1, 1000))
