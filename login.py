@@ -21,8 +21,7 @@ def login_system():
             break 
         else:
             print("Username cannot be empty. Please try again.")
-
-
+            
 def display_random_movies(file_path):
     try:
        
@@ -34,7 +33,6 @@ def display_random_movies(file_path):
         else:
             print("The file contains fewer than 20 movies. Displaying all available movies.")
             random_movies = df
-        
         
         print("\nHere are 20 random movie recommendations:\n")
         for i, (index, movie) in enumerate(random_movies.iterrows(), start=1):
@@ -48,7 +46,6 @@ def display_random_movies(file_path):
             print(f"Original Language: {movie['orig_lang']}")
             print("\n")
         
-       
         chosen_indices = []
         while len(chosen_indices) < 5:
             try:
@@ -77,7 +74,6 @@ def display_random_movies(file_path):
         print("Error: The CSV file is empty.")
     except Exception as e:
         print(f"An error occurred: {e}")
-
 
 if __name__ == "__main__":
     login_system()
