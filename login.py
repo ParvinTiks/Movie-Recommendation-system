@@ -1,13 +1,13 @@
 import pandas as pd
 import random
 
-# Console-based user login system
+
 def login_system():
     print("Welcome to the Movie Data Login System")
     while True:
         username = input("Please enter your username: ")
         
-        if username.strip():  # Check if the input is not empty or just spaces
+        if username.strip():
             print(f"You are now logged in as {username}")
             print(f"Hello, {username}!")
             user_decision = input("Would you like to see movie recommendations? (y/n): ").strip().lower()
@@ -18,25 +18,25 @@ def login_system():
                 print("Thank you! Goodbye!")
             else:
                 print("Invalid input. Please type 'y' or 'n'.")
-            break  # Exit the loop after the interaction is complete
+            break 
         else:
             print("Username cannot be empty. Please try again.")
 
-# Function to display 20 random movies from a CSV file and allow the user to choose 5 movies
+
 def display_random_movies(file_path):
     try:
-        # Load the CSV file into a DataFrame
+       
         df = pd.read_csv(file_path)
         
-        # Check if there are at least 20 movies
+        
         if len(df) >= 20:
-            # Select 20 random rows
+            
             random_movies = df.sample(n=20, random_state=random.randint(1, 1000))
         else:
             print("The file contains fewer than 20 movies. Displaying all available movies.")
             random_movies = df
         
-        # Print the selected movies with numbering
+        
         print("\nHere are 20 random movie recommendations:\n")
         for i, (index, movie) in enumerate(random_movies.iterrows(), start=1):
             print(f"{'-' * 5} {i} {'-' * 5}")
@@ -47,9 +47,9 @@ def display_random_movies(file_path):
             print(f"Overview: {movie['overview']}")
             print(f"Crew: {movie['crew']}")
             print(f"Original Language: {movie['orig_lang']}")
-            print("\n")  # Line break between each movie for better readability
+            print("\n")
         
-        # Prompt the user to choose 5 movies by their numbers
+       
         chosen_indices = []
         while len(chosen_indices) < 5:
             try:
@@ -65,13 +65,13 @@ def display_random_movies(file_path):
             except ValueError:
                 print("Invalid input. Please enter a number.")
         
-        # Display only the chosen numbers and movie titles
+        
         print("\nYou selected the following movies:")
         for choice in chosen_indices:
             chosen_movie = random_movies.iloc[choice - 1]
             print(f"{choice} - {chosen_movie['names']}")
         
-        # Wish the user something good
+        
         print("\nThank you for your selections! Enjoy your movie marathon and have a great time!")
 
     except FileNotFoundError:
@@ -82,10 +82,5 @@ def display_random_movies(file_path):
         print(f"An error occurred: {e}")
 
 
-
-
-
-
-# Run the login system
 if __name__ == "__main__":
     login_system()
