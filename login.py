@@ -13,7 +13,7 @@ def login_system():
             user_decision = input("Would you like to see movie recommendations? (y/n): ").strip().lower()
             
             if user_decision == 'y':
-                display_random_movies("C:/Users/kaivkarl/OneDrive - Tartu Ülikool/Töölaud/Kool/Andmeteadus/Projekt/Movie-Recommendation-system/imdb_movies.csv")
+                display_random_movies("imdb_movies.csv")
             elif user_decision == 'n':
                 print("Thank you! Goodbye!")
             else:
@@ -64,12 +64,10 @@ def display_random_movies(file_path):
             except ValueError:
                 print("Invalid input. Please enter a number.")
         
-        
         print("\nYou selected the following movies:")
         for choice in chosen_indices:
             chosen_movie = random_movies.iloc[choice - 1]
             print(f"{choice} - {chosen_movie['names']}")
-        
         
         print("\nThank you for your selections! Enjoy your movie marathon and have a great time!")
 
