@@ -10,4 +10,10 @@ Datasience project
 **GOAL:** Our goal was to make a system that gives users movie suggestions based on other movies they have seen and liked. It should take into consideration movie genres, actors and ratings to make an accurate prediction and recommend a movie that the user should enjoy.
 
 
-**HOW TO USE THE SYSTEM** The program is usable in Google colab. It is 
+**HOW TO USE THE SYSTEM** The program is usable in Google colab. Movie_reccomandation_system.ipynb is the file, to upload. After that, it is crucial to make sure, that you have google drive folder, where you upload imdb_movies_with_id.csv.
+
+
+**DATASET** Original dataset is named imdb_movies.csv. We added ID to dataset, so modified dataset is imdb_movies_with_id.csv. 
+
+
+**Progress** Files login.py, main.py, readcsv.py, displayMovies.py are small pieces of program. 
