@@ -8,3 +8,6 @@ Datasience project
 
 
 **GOAL:** Our goal was to make a system that gives users movie suggestions based on other movies they have seen and liked. It should take into consideration movie genres, actors and ratings to make an accurate prediction and recommend a movie that the user should enjoy.
+
+
+**HOW TO USE THE SYSTEM** The program is usable in Google colab. It is 
